@@ -30,3 +30,9 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 -- Incremental search is cool
 vim.opt.incsearch = true
+
+-- BUFFER SPLITS
+-- Split on right vertically by default
+vim.opt.splitright = true
+-- Split below horizontally by default
+vim.opt.splitbelow = true
