@@ -22,6 +22,7 @@ local lua_ls_setup = {
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup({})
 lspconfig.lua_ls.setup({ settings = lua_ls_setup })
+lspconfig.marksman.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

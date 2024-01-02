@@ -105,7 +105,9 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         * `S`
             * Find string dynamically
             * Telescope updates files as you type string (but cannot search through resultant files)
- 
+        * `u`
+            * Find a previous undo in the undo tree
+
                
         **Open**: `o`   
         Any keymaps that open a menu

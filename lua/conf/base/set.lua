@@ -21,3 +21,6 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 -- Tabs are 2 spaces 
 vim.opt.tabstop = 2
+
+-- Persistent undo
+vim.opt.undofile = true
