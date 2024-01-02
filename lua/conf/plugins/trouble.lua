@@ -19,9 +19,9 @@ wk.register({
       function() require("trouble").toggle("loclist") end,
       "Trouble [l]ocation list",
     },
-    r = {
-      function() require("trouble").toggle("lsp_references") end,
-      "Trouble [r]eferences to current token",
+    t = {
+      function() require("trouble").toggle() end,
+      "[t]oggle Trouble",
     },
     x = {
       function() require("trouble").close() end,

@@ -128,5 +128,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
       }
     })
 
+    wk.register({
+      name = "[t]rouble",
+      t = {
+        r = {
+          function() require("trouble").toggle("lsp_references") end,
+          "Trouble [r]eferences to current token",
+        },
+      }
+    },
+    {
+      prefix = "<leader>"
+    })
+
   end,
 })

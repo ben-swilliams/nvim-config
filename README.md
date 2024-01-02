@@ -117,7 +117,7 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Opens plugin manager (at time of writing, lazy.nvim)
          
               
-* **Goto**: `g`
+* **Goto**: `g`   
     Any keymaps that go to a place in the file
     * `d`
         * **Go to definition of token under cursor**
@@ -130,6 +130,24 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         * Uses telescope, references are global (in workspace) not just current buffer
   * `t`
     * **Go to type definition of token under cursor**  
+
+
+* **Trouble**: `t`   
+    Any keymaps that interact with trouble
+    * `d`
+        * Open document diagnostics
+    * `l`
+        * Open location list
+    * `q`
+        * Open quickfix list
+    * `r`
+        * **Open references to token under cursor**
+    * `t`
+        * Toggle Trouble window (basically reruns last Trouble search)
+    * `w`
+        * Open workspace diagnostics
+    * `x`
+        * Close trouble
 </details>
 
     
