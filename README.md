@@ -93,6 +93,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
               
         **Find**: `f`   
         Any keymaps to find something using telescope (usually files, strings or references)
+        * `b`
+            * Find buffer in open buffers
         * `f`
             * Find file in cwd (wherever `vi` was run from)
         * `o`

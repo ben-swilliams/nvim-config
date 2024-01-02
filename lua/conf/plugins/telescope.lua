@@ -8,11 +8,11 @@ wk.register({
   f = {
     name = "[f]ind",
     f = {
-      function() builtin.find_files() end,
+      builtin.find_files,
       "Find [f]ile"
     },
     s = {
-      function() builtin.live_grep() end,
+      builtin.live_grep,
       "Find [s]tring"
     },
     S = {
@@ -20,12 +20,16 @@ wk.register({
       "Find [s]tring (static)"
     },
     r = {
-      function() builtin.grep_string() end,
+      builtin.grep_string,
       "Find [r]eferences"
     },
     o = {
-      function() builtin.oldfiles() end,
+      builtin.oldfiles,
       "[o]ld files"
+    },
+    b = {
+      builtin.buffers,
+      "Find [b]uffer"
     }
   },
 },
