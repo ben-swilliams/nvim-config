@@ -23,3 +23,8 @@ wk.register({
 {
   prefix = "<leader>"
 })
+
+-- Which-key doesn't work on non-auto-submitting commands
+vim.keymap.set("n", "<leader>cr",
+  [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+  { desc = "[r]ename symbol" })

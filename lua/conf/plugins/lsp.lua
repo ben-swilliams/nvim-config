@@ -49,10 +49,6 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev,
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next,
   { desc = "Go to next diagnostic" })
 
-  -- Which-key doesn't work on non-auto-submitting commands
-  vim.keymap.set("n", "<leader>cr",
-    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "[r]ename symbol" })
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
