@@ -24,3 +24,9 @@ vim.opt.tabstop = 2
 
 -- Persistent undo
 vim.opt.undofile = true
+
+-- SEARCHING
+-- Don't keep things highlighted
+vim.opt.hlsearch = false
+-- Incremental search is cool
+vim.opt.incsearch = true
