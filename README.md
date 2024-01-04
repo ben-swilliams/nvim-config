@@ -117,6 +117,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Opens Mason to configure LSP server installs etc.
         * `p`
             * Opens plugin manager (at time of writing, lazy.nvim)
+        * `n`
+            * Opens null ls info for current file type
          
               
 * **Goto**: `g`   
