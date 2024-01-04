@@ -1,7 +1,15 @@
-local null_ls = require("null-ls")
+require("null-ls").setup {}
 
-null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.black
+local wk = require("which-key")
+wk.register({
+  o = {
+    name = "[o]pen",
+    n = {
+      vim.cmd.NullLsInfo,
+      "Open [n]ull-ls information"
+    }
   }
+},
+{
+  prefix = "<leader>"
 })
