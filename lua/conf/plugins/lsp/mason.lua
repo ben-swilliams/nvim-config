@@ -18,8 +18,8 @@ require("mason-lspconfig").setup({
 local wk = require("which-key")
 
 wk.register({
-    name = "[o]pen",
     o = {
+      name = "[o]pen",
       m = {
         "<cmd>Mason<cr>",
         "[m]ason LSP servers"

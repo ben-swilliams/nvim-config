@@ -110,8 +110,8 @@ local on_attach = function(client, bufnr)
   })
 
   wk.register({
-      name = "[t]rouble",
       t = {
+        name = "[t]rouble",
         r = {
           function() require("trouble").toggle("lsp_references") end,
           "Trouble [r]eferences to current token",
