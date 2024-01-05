@@ -40,10 +40,16 @@ wk.register({
 -- Open telescope results in trouble
 
 local trouble = require("trouble.providers.telescope")
+local actions = require("telescope.actions")
+
 require("telescope").setup {
   defaults = {
     mappings = {
-      i = { ["<c-t>"] = trouble.open_with_trouble },
+      i = {
+        ["<c-t>"] = trouble.open_with_trouble,
+        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+        ["<C-j>"] = actions.move_selection_next -- move to next result
+      },
       n = { ["<c-t>"] = trouble.open_with_trouble },
     },
   },

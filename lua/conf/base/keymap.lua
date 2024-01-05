@@ -25,6 +25,6 @@ wk.register({
 })
 
 -- Which-key doesn't work on non-auto-submitting commands
-vim.keymap.set("n", "<leader>cr",
+vim.keymap.set("n", "<leader>r",
   [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "[r]ename symbol" })

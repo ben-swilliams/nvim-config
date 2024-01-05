@@ -74,6 +74,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         * Yank selection to system clipboard
     * `p`
         * Paste selection without nuking yank buffer
+    * `r`
+        * Rename token under cursor (find and replace in file)
  
           
         **Code**: `c`   
@@ -87,8 +89,7 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         * `l`
             * Sets location list to diagnostics of current file
         * `r`
-            * Rename symbol under cursor. Note that this is 'dumb', and does not use LSP. Basically a replace all.
-            * **TODO** Look into LSP supported token renaming.
+            * **Rename symbol under cursor**
  
               
         **Find**: `f`   
@@ -97,6 +98,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Find buffer in open buffers
         * `f`
             * Find file in cwd (wherever `vi` was run from)
+        * `d`
+            * Find in diagnostics for file
         * `o`
             * Find old files from open history
         * `r`
@@ -117,8 +120,6 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Opens Mason to configure LSP server installs etc.
         * `p`
             * Opens plugin manager (at time of writing, lazy.nvim)
-        * `n`
-            * Opens null ls info for current file type
          
               
 * **Goto**: `g`   
@@ -131,9 +132,9 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         * **Go to implementation of function under cursor**
     * `r`
         * **Go to references of token under cursor**
-        * Uses telescope, references are global (in workspace) not just current buffer
-  * `t`
-    * **Go to type definition of token under cursor**  
+        * Opens in-line pop-up for local buffer only (as opposed to <leader>fr
+    * `t`
+        * **Go to type definition of token under cursor**  
 
 
 * **Trouble**: `t`   
