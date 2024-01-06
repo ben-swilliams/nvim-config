@@ -76,10 +76,17 @@ local on_attach = function(client, bufnr)
       c = {
         name = "[c]ode",
         a = {
-          vim.lsp.buf.code_action,
-          "Code [a]ction",
-          mode = {"n", "v"},
-          opts
+          {
+            vim.lsp.buf.code_action,
+            "Code [a]ction",
+            opts
+          },
+          {
+            vim.lsp.buf.range_code_action,
+            "Range code [a]ction",
+            mode = { "v" },
+            opts
+          }
         },
         f = {
           function()
