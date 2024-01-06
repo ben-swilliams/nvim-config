@@ -126,6 +126,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         Any keymaps that open a menu
         * `m`
             * Opens Mason to configure LSP server installs etc.
+        * `n`
+            * Opens NoneLS info to see what's going on with non-LSP formatting, linting etc.
         * `p`
             * Opens plugin manager (at time of writing, lazy.nvim)
          
