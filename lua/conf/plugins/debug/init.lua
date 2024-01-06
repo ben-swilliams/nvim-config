@@ -1,4 +1,4 @@
-require("conf.plugins.dap.dap-config")
+require("conf.plugins.debug.dap-config")
 
 local dap_configs = {
   "python"
