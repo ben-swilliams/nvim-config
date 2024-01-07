@@ -39,3 +39,6 @@ vim.opt.splitbelow = true
 
 -- Set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
+
+-- Sort diagnostic severity rather than showing last
+vim.diagnostic.config({ severity_sort = true })
