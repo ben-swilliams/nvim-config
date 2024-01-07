@@ -67,7 +67,7 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
     * `<leader>`
         * Source current file. Basically runs it, mainly for things like configuration.
     * `e`
-        * Go to NetFW
+        * Open nvim tree (or NetFW if nvim tree isn't installed for some reason)
     * `Y`
         * Yank line to system clipboard
     * `y`
