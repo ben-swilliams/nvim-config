@@ -19,7 +19,7 @@ vim.opt.smartindent = true
 vim.opt.expandtab = true
 -- Indents are 2 spaces
 vim.opt.shiftwidth = 2
--- Tabs are 2 spaces 
+-- Tabs are 2 spaces
 vim.opt.tabstop = 2
 
 -- Persistent undo
@@ -36,3 +36,6 @@ vim.opt.incsearch = true
 vim.opt.splitright = true
 -- Split below horizontally by default
 vim.opt.splitbelow = true
+
+-- Set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
