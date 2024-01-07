@@ -5,5 +5,5 @@ local dap_configs = {
 }
 
 for k, v in pairs(dap_configs) do
-  require("conf.plugins.dap." .. v)
+  require("conf.plugins.debug." .. v)
 end
