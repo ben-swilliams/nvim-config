@@ -6,4 +6,11 @@ require("tokyonight").setup {
   end
 }
 
-vim.cmd[[colorscheme tokyonight]]
+local gb_colors = require("gruvbox").palette
+require("gruvbox").setup {
+  overrides = {
+    LineNr = { fg = gb_colors.bright_yellow, bold = true }
+  }
+}
+
+vim.cmd[[colorscheme gruvbox]]
