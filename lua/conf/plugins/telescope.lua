@@ -1,4 +1,4 @@
-require("telescope").setup()
+require("telescope").setup({})
 require('telescope').load_extension('fzf')
 
 local wk = require("which-key")
