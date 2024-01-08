@@ -34,14 +34,14 @@ nvim/
     │   │   ├── colours.lua
     │   │   ├── keymap.lua
     │   │   └── set.lua
-    │   └── plugins/
-    │       ├── init.lua
-    │       ├── dap-configs
-    │           └── [dap_config_for_filetype].lua
-    │       ├── lsp
-    │           ├── init.lua
-    │           └── [lsp_related_plugin].lua
-    │       └── [plugin].lua
+    │   ├── plugins/
+    │   │   ├── init.lua
+    │   │   ├── dap-configs
+    │   │   │  └── [dap_config_for_filetype].lua
+    │   │   ├── lsp
+    │   │   │   ├── init.lua
+    │   │   │   └── [lsp_related_plugin].lua
+    │   │   └── [plugin].lua
     └── plugins/
         └── [plugin].lua
 ```
