@@ -37,7 +37,7 @@ nvim/
     │   ├── plugins/
     │   │   ├── init.lua
     │   │   ├── dap-configs
-    │   │   │  └── [dap_config_for_filetype].lua
+    │   │   │   └── [dap_config_for_filetype].lua
     │   │   ├── lsp
     │   │   │   ├── init.lua
     │   │   │   └── [lsp_related_plugin].lua
