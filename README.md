@@ -30,12 +30,17 @@ nvim/
     ├── conf/
     │   ├── init.lua
     │   ├── base/
-    │   │   ├── colours.lua
     │   │   ├── init.lua
+    │   │   ├── colours.lua
     │   │   ├── keymap.lua
     │   │   └── set.lua
     │   └── plugins/
     │       ├── init.lua
+    │       ├── dap-configs
+    │           └── [dap_config_for_filetype].lua
+    │       ├── lsp
+    │           ├── init.lua
+    │           └── [lsp_related_plugin].lua
     │       └── [plugin].lua
     └── plugins/
         └── [plugin].lua
@@ -51,8 +56,20 @@ My main [init.lua](nvim-config/init.lua) does 3 things:
         a table that lazy.nvim uses to install/update the plugin.   
     2. Then the [config directory](nvim-config/config) is required. This chains to two directories:   
         * [base](nvim-config/config/base) handles colour theme, vanilla keymaps and vim settings   
-        * [plugins](nvim-config/config/plugins) handles all plugin configuration and keymaps. There is largely one per plugin (mason and mason-lspconfig are grouped into one file
-             [mason.lua](nvim-config/config/plugins/mason.lua)
+        * [plugins](nvim-config/config/plugins) handles all plugin configuration and keymaps. There is largely one per plugin (related dependent plugins may be grouped in some cases).
+
+## LSP
+The LSP configuration is segregated a bit more than the other plugins. It has [its own directory](nvim-config/config/plugins/lsp) which contains two things:
+    1. LSP related plugin configuration, e.g. mason, nvim-cmp ...
+    2. Another sub-directory, containing one file per LSP installed. These have to be manually created and explicitly added to a table to be called in the LSP configs [init.lua](nvim/config/plugins/lsp/lsp_configs/init.lua).
+The manual file required per LSP forces me to actually think about the configuration for each LSP, and stops the LSP configuration file from getting too big.
+
+## DAP
+The DAP I have configured to be a tad special. My goal was to have the ability to configure both different keybindings and different debug window layouts for each file I have a DAP for.
+I have done this by configuring the DAP a 'default' way in its [configuration file](nvim-config/config/plugins/dap-config.lua). As a part of this, if you try to open the DAP UI then it will
+refuse and warn you if you don't have a DAP for the current file type configured.   
+Then I add an autocommand for each configured DAP which calls the configuration for that filetype (in [the configs directory](nvim-config/config/plugins/dap-configs). It's in these files I can
+configure the DAP UI layout and any key bindings that I need. Pretty cool, it took **forever** to figure out.
 
 ## Keybinds (which-key)
 The only (thusfar) significant plugin to document my usage of for prosperity is [which-key](https://github.com/folke/which-key.nvim).   
@@ -93,11 +110,13 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
 
 
         **Debug**: `d`
-        Any keymaps that interact with the nvim debug adapter (nvim-dap)
+        Any keymaps that interact with the nvim debug adapter (nvim-dap), these will only work if a valid DAP is configured (see above)
         * `b`
             * Toggle breakpoint on this line
         * `c`
             * Continue running the program
+        * `t`
+            * Toggles the debug elements
  
               
         **Find**: `f`   
