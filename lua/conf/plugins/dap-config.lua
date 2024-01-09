@@ -1,8 +1,6 @@
 local dap, ui = require("dap"), require("dapui")
 
 ui.setup()
-dap.listeners.before.attach.dapui_config = ui.open
-dap.listeners.before.launch.dapui_config = ui.open
 require("which-key").register({
 	d = {
 		function()
