@@ -115,6 +115,10 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Toggle breakpoint on this line
         * `c`
             * Continue running the program
+        * `e`
+            * Evaluate an expression in a floating window
+        * `i`
+            * Inspect current variable value
         * `t`
             * Toggles the debug elements
  

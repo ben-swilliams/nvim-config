@@ -99,11 +99,15 @@ local configure = function()
       },
       i = {
         ui.eval,
-        "Show current variable [e]valuation",
+        "[i]nspect current variable",
       },
       t = {
         ui.toggle,
         "[t]oggle debug elements"
+      },
+      e = {
+        function() ui.eval(vim.fn.input("Evaluate > ")) end,
+        "[e]valuate expression"
       }
     },
   }, {
