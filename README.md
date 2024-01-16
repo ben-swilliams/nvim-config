@@ -113,6 +113,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
         Any keymaps that interact with the nvim debug adapter (nvim-dap), these will only work if a valid DAP is configured (see above)
         * `b`
             * Toggle breakpoint on this line
+        * `B`
+            * Clear all breakpoints in file
         * `c`
             * Continue running the program
         * `e`
@@ -121,6 +123,8 @@ Below are all custom keybindings. If any are on bold, they are dependent on the 
             * Inspect current variable value
         * `t`
             * Toggles the debug elements
+        * `x`
+            * Terminate the session
  
               
         **Find**: `f`   
