@@ -69,7 +69,9 @@ The DAP I have configured to be a tad special. My goal was to have the ability t
 I have done this by configuring the DAP a 'default' way in its [configuration file](nvim-config/config/plugins/dap-config.lua). As a part of this, if you try to open the DAP UI then it will
 refuse and warn you if you don't have a DAP for the current file type configured.   
 Then I add an autocommand for each configured DAP which calls the configuration for that filetype (in [the configs directory](nvim-config/config/plugins/dap-configs). It's in these files I can
-configure the DAP UI layout and any key bindings that I need. Pretty cool, it took **forever** to figure out.
+configure the DAP UI layout and any key bindings that I need. Pretty cool, it took **forever** to figure out.   
+There is a [default configuration](nvim-config/config/plugins/dap-configs/default.lua) that will initialise some basic keybindings for any DAP attachment. Right now it is just keybindings but any DAP
+configuration could feasibly be added to this configure funciton if required.
 
 ## Keybinds (which-key)
 The only (thusfar) significant plugin to document my usage of for prosperity is [which-key](https://github.com/folke/which-key.nvim).   
