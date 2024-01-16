@@ -1,6 +1,7 @@
 local dap = require("dap")
 local ui = require("dapui")
 local wk = require("which-key")
+local default = require("conf.plugins.dap-configs.default")
 
 dap.adapters.python = function(cb, config)
   if config.request == "attach" then
@@ -86,37 +87,12 @@ local configure = function()
     },
   })
 
-  wk.register({
-    d = {
-      name = "[d]ebug",
-      c = {
-        dap.continue,
-        "[c]ontinue running program",
-      },
-      b = {
-        dap.toggle_breakpoint,
-        "Toggle [b]reakpoint",
-      },
-      i = {
-        ui.eval,
-        "[i]nspect current variable",
-      },
-      t = {
-        ui.toggle,
-        "[t]oggle debug elements"
-      },
-      e = {
-        function() ui.eval(vim.fn.input("Evaluate > ")) end,
-        "[e]valuate expression"
-      }
-    },
-  }, {
-    prefix = "<leader>",
-  })
+  default.configure()
+  -- Any extra wk.registers here
 end
 
 M = {}
 
-M.configuration = configure
+M.configure = configure
 
 return M

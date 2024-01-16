@@ -19,7 +19,7 @@ for k, v in pairs(dap_configs) do
 		[[
         augroup DAPConfig_%s
             autocmd!
-            autocmd BufRead,BufNewFile *%s lua require("conf.plugins.dap-configs.%s").configuration()
+            autocmd BufRead,BufNewFile *%s lua require("conf.plugins.dap-configs.%s").configure()
         augroup END
     ]],
 		k,
