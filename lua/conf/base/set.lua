@@ -42,3 +42,6 @@ vim.opt.termguicolors = true
 
 -- Sort diagnostic severity rather than showing last
 vim.diagnostic.config({ severity_sort = true })
+
+-- Signcolumn slightly larger
+vim.opt.signcolumn = "auto:2"
