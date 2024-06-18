@@ -25,7 +25,7 @@ wk.register({
     },
     o = {
       builtin.oldfiles,
-      "[o]ld files"
+      "Find [o]ld files"
     },
     b = {
       builtin.buffers,

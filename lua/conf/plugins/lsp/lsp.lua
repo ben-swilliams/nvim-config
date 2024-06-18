@@ -26,11 +26,22 @@ wk.register({
     prefix = "<leader>"
   })
 
--- Diagnostic navigation
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev,
-  { desc = "Go to previous diagnostic" })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next,
-  { desc = "Go to next diagnostic" })
+wk.register({
+  ["["] = {
+    name = "Previous",
+    d = {
+      vim.diagnostic.goto_prev,
+      "Previous diagnostic"
+    }
+  },
+  ["]"] = {
+    name = "Next",
+    d = {
+      vim.diagnostic.goto_next,
+      "Next diagnostic"
+    }
+  }
+})
 
 local builtin = require("telescope.builtin")
 local opts = { noremap = true, silent = true }
@@ -137,7 +148,17 @@ local on_attach = function(client, bufnr)
         builtin.diagnostics,
         "Find [d]iagnostic",
         opts
-      }
+      },
+      t = {
+        builtin.lsp_document_symbols,
+        "Find [t]oken",
+        opts
+      },
+      T = {
+        builtin.lsp_dynamic_workspace_symbols,
+        "Find workspace [T]oken",
+        opts
+      },
     }
   },
   {
